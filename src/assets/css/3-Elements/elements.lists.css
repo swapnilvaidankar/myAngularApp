@@ -1,0 +1,9 @@
+ul, ol {
+    list-style: square outside;
+    /* border: 1px solid black; */
+}
+
+li > ul, li > ol {
+    margin-left: 4 * var(--base-spacing-unit);
+    margin-bottom: 0;
+ }

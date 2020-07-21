@@ -1,0 +1,10 @@
+// @import "../../assets/css/pg-grid.scss";
+.pg-header{
+    height: 60px;
+    display: flex;
+    align-items: center;
+    .pg-logo{
+        width: 135px;
+        height: auto;
+    }
+}

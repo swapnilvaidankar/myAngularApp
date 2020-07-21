@@ -1,0 +1,81 @@
+/* You can add global styles to this file, and also import other style files */
+@import "./assets/css/0-Settings/settings.colors.scss";
+@import "./assets/css/0-Settings/settings.global.scss";
+
+@import "./assets/css/3-Elements/elements.buttons.scss";
+@import "./assets/css/3-Elements/elements.forms.scss";
+@import "./assets/css/3-Elements/elements.headings.scss";
+// @import "./assets/css/3-Elements/elements.images.scss";
+@import "./assets/css/3-Elements/elements.labels.scss";
+@import "./assets/css/3-Elements/elements.links.scss";
+
+
+@import "./assets/css/6-Utilities/utilities.utilities.scss";
+@import "./assets/css/4-Components/components.headings.scss";
+@import "./assets/css/4-Components/components.buttons.scss";
+@import "./assets/css/4-Components/components.panel.scss";
+@import "./assets/css/4-Components/component.badges.scss";
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "./assets/css/variables.scss";
+@import "./assets/css/pg-grid.scss";
+
+div{
+    // border: 1px solid black;
+}
+/* font converted using font-converter.net. thank you! */
+@font-face {
+    font-family: "Roboto-Light";
+    src: url("./assets/fonts/Roboto-Light.eot"); /* IE9 Compat Modes */
+    src: url("./assets/fonts/Roboto-Light.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+      url("./assets/fonts/Roboto-Light.otf") format("opentype"), /* Open Type Font */
+      url("./assets/fonts/Roboto-Light.svg") format("svg"), /* Legacy iOS */
+      url("./assets/fonts/Roboto-Light.ttf") format("truetype"), /* Safari, Android, iOS */
+      url("./assets/fonts/Roboto-Light.woff") format("woff"), /* Modern Browsers */
+      url("./assets/fonts/Roboto-Light.woff2") format("woff2"); /* Modern Browsers */
+    font-weight: normal;
+    font-style: normal;
+  }
+  /* font converted using font-converter.net. thank you! */
+// @font-face {
+//     font-family: "Roboto-Regular";
+//     src: url("./assets/fonts/Roboto-Regular.eot"); /* IE9 Compat Modes */
+//     src: url("./assets/fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), /* IE6-IE8 */
+//       url("./assets/fonts/Roboto-Regular.otf") format("opentype"), /* Open Type Font */
+//       url("./assets/fonts/Roboto-Regular.svg") format("svg"), /* Legacy iOS */
+//       url("./assets/fonts/Roboto-Regular.ttf") format("truetype"), /* Safari, Android, iOS */
+//       url("./assets/fonts/Roboto-Regular.woff") format("woff"), /* Modern Browsers */
+//       url("./assets/fonts/Roboto-Regular.woff2") format("woff2"); /* Modern Browsers */
+//     font-weight: normal;
+//     font-style: normal;
+//   }
+  body{
+      font-family: "Roboto-Light" !important;
+  }
+$isLeftColumn-visible:true;
+$isMiddleColumn-visible:true;
+$isRightColumn-visible:false;
+
+.pg-leftColumn{
+    @if ($isLeftColumn-visible){
+        width: 25% !important;
+    } @else{
+        width: 0 !important;
+    }
+}
+
+.pg-middleColumn{
+    @if ($isMiddleColumn-visible and $isLeftColumn-visible and $isRightColumn-visible){
+        width: 50% !important;
+    } @else if ($isLeftColumn-visible != true or $isRightColumn-visible != true){
+        width: 75% !important;
+    }
+}
+
+
+.pg-rightColumn{
+    @if ($isRightColumn-visible){
+        width: 25% !important;
+    } @else{
+        width: 0 !important;
+    }
+}

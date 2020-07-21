@@ -1,0 +1,32 @@
+.p-badge {
+    display: inline-block;
+    min-width: 10px;
+    padding: 3px 7px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    background-color: #777;
+    border-radius: 10px;
+}
+.p-badge.p-bg-primary {
+    background: #8075c4;
+}
+.p-badge.p-bg-success {
+    background: #a9d86e;
+}
+.p-badge.p-bg-info {
+    background: #41cac0;
+}
+.p-badge.p-bg-inverse {
+    background: #2A3542;
+}
+.p-badge.p-bg-warning {
+    background: #FCB322;
+}
+.p-badge.p-bg-important {
+    background: #ff6c60;
+}

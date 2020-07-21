@@ -1,0 +1,11 @@
+.pg-label{
+    display: block;    
+    font-size: var(--body-font-size);    
+    line-height: 1;
+    color: var(--base-text-color);
+    text-align: left;
+    /* white-space: nowrap; */
+    /* vertical-align: baseline; */
+    /* border-radius: .25em; */
+    margin-bottom: var(--base-margin);
+}

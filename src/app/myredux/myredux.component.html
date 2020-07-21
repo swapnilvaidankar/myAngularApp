@@ -1,0 +1,18 @@
+<h1>
+  {{title}}
+</h1>
+
+<p>Counter : {{counter | async}}</p>
+<button (click)="increment()">Increment</button>
+
+<ul class="list-group">
+  <li *ngFor="let post of (post | async)" class="list-group-item">
+    <button class="btn btn-primary btn-small" (click)="updatePost(post)">
+      Update
+    </button>
+    <button class="btn btn-secondary btn-small" (click)="deletePost(post)">
+      Delete
+    </button>
+    {{ post.title }}
+  </li>
+</ul>

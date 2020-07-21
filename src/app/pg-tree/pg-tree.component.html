@@ -1,0 +1,60 @@
+<p>
+  pg-tree works!
+</p>
+<p>
+  <button type="button" class="btn btn-outline-primary" (click)="isCollapsed = !isCollapsed" [attr.aria-expanded]="!isCollapsed"
+    aria-controls="collapseExample">
+    Toggle
+  </button>
+</p>
+<div id="collapseExample" [ngbCollapse]="isCollapsed">
+  <div class="card" >
+    <div class="card-body" @fade>
+      You can collapse this card by clicking Toggle
+    </div>
+  </div>
+</div>
+<div class="pg-categories">
+  <ng-container *ngTemplateOutlet="tree; context: { node: node }"> </ng-container>
+</div>
+<ng-template #tree let-node="node">
+  <!-- <div>{{ node.name }}</div> -->
+  <ul *ngIf="node.children && node.children.length > 0" class="pg-category-list">
+    <ng-container *ngFor="let child of node.children; let i = index">
+      <!-- index : {{i}} Test : {{rowControls[i]['isCollapse_' + child.id] | json}} -->
+      <!-- key : {{child['isCollapse_' + child.id] | json}} opposite : {{!child['isCollapse_' + child.id | json]}} -->
+      <li class="pg-category-item" [class.hasChild]="child['isCollapse_' + child.id]" (click)="
+            rowControls[i]['isCollapse_' + child.id] = !rowControls[i]['isCollapse_' + child.id];
+            $event.stopPropagation();
+          ">
+        <div class="pg-category-link">{{ child.name }}</div>
+
+        <div id="a" [ngbCollapse]="rowControls[i]['isCollapse_' + child.id]" [class.hide]="!rowControls[i]['isCollapse_' + child.id]"
+          [class.show1]="rowControls[i]['isCollapse_' + child.id]">
+          <ng-container *ngTemplateOutlet="tree; context: { node: child }">
+          </ng-container>
+        </div>
+      </li>
+    </ng-container>
+  </ul>
+</ng-template>
+
+<div>{{ rowControls | json }}</div>
+
+<!-- backup -->
+<!-- <ng-container *ngTemplateOutlet="tree; context: { node: node }"> </ng-container>
+<ng-template #tree let-node="node">
+  <div>{{ node.name }}</div>
+  <ul *ngIf="node.children && node.children.length > 0">
+    <ng-container *ngFor="let child of node.children; let i = index">
+       index : {{i}} Test : {{rowControls[i]['isCollapse_' + child.id] | json}}
+          <li class="hasChild" (click)="rowControls[i]['isCollapse_' + child.id] = !rowControls[i]['isCollapse_' + child.id];$event.stopPropagation();">
+        <div [ngbCollapse]="rowControls[i]['isCollapse_' + child.id]">
+          <ng-container *ngTemplateOutlet="tree; context: { node: child }">
+          </ng-container>
+        </div>
+      </li>
+    </ng-container>
+  </ul>
+</ng-template>
+<div>{{ rowControls | json }}</div> -->

@@ -1,0 +1,27 @@
+.hasChild{
+    background: url('../../assets/images/down.png');    
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 99% 15px;
+    cursor: pointer;
+}
+.show1{
+    display: block !important;
+}
+.hide{
+    display: none !important;
+}
+.pg-categories{
+    // border: 1px solid black;
+    width: 300px;
+    margin-top: 20px;
+    .pg-category-list{
+        // border: 1px solid red;
+        padding-left: 10px;
+        .pg-category-item{
+            border-bottom: 1px solid lightgray;
+            list-style: none;
+            line-height: 3;
+        }
+    }
+}

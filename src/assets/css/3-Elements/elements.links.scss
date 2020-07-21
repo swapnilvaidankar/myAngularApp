@@ -1,0 +1,13 @@
+a {
+    /* font-size: var(--body-font-size); */
+    color: var(--link-color);
+    
+}
+
+a:focus,
+a:hover {
+    color: var(--link-hover-color);
+    /* color:  darken(#BADA55, 15%); */
+    background-blend-mode: darken;
+    outline: 0;
+}

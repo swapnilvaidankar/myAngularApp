@@ -1,0 +1,29 @@
+<!-- interpolation and property binding -->
+<h1>test</h1>
+<!-- event binding -->
+<button (click)="onSave($event)">Submit</button>
+<!-- template binding -->
+<input #email (keyup.enter)="onKeyUp(email.value)" />
+<!-- two way binding -->
+<input [(ngModel)]="email1" (keyup.enter)="onKeyUpTB()" />
+
+<ul>
+  <li *ngFor="let course of courses$ | async">
+    {{ course }}
+  </li>
+</ul>
+<p>
+  {{ course$ | async | json }}
+</p>
+<p>
+  {{ author$ | async | json }}
+</p>
+
+<!-- <ul>
+  <li>{{ (author$ | async).name }}</li>
+  <li>{{ (author$ | async).students }}</li>
+  <li>{{ (author$ | async).isPremium }}</li>
+</ul> -->
+
+<!-- <input type="text" (keyup.enter) = "add(course)" #course> -->
+<!-- <button (click) = 'ngOnDestroy()'>Submit</button> -->

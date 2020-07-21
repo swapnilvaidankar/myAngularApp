@@ -1,0 +1,76 @@
+<div class="pg-product-card" [class.pghide]="hide">
+    <form @fade ngForm #f="ngForm" (ngSubmit)="handlefSubmit(f)">
+        <div class="form-group">
+            <label>First Name</label>
+            <input type="text" ngModel name="firstName" #firstName="ngModel" class="form-control">
+        </div>
+        <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" ngModel name="lastName" #lastName="ngModel" class="form-control">
+        </div>
+
+        <div class="pg-product-card-imagepane">
+            <div class="pg-product-card-image-area">
+                <img class="pg-product-card-image" src="../../assets/images/BCard.jpg" />
+            </div>
+        </div>
+        <div class="pg-product-card-content">
+            <div class="">
+                <a href="#" class="pg-secondary-link">Reorder this product</a>
+            </div>
+            <div class="pg-sub-panel">
+                <div class="pg-product-card-name">
+                    <label class="pg-subTitle-heading">{{product}}</label>
+                </div>
+                <div class="pg-product-info">
+                    <img src="../../assets/images/wrong.png" class="pg-icon-button">
+                    <img src="../../assets/images/wrong.png" class="pg-icon-button">
+                </div>
+            </div>
+            <div class="pg-form-group-inline">
+                <label class="pg-product-card-label">
+                    Stock Level
+                </label>
+                <label class="pg-label">
+                    50
+                </label>
+            </div>
+            <div class="pg-form-group-inline">
+                <label class="pg-label">
+                    Min - Max
+                </label>
+                <label class="pg-label">
+                    0 - 0
+                </label>
+            </div>
+            <div class="pg-form-group-inline">
+                <label class="pg-label">
+                    Quality/Pack
+                </label>
+                <label class="pg-label">
+                    100
+                </label>
+            </div>
+            <div class="pg-sub-panel">
+                <div class="pg-product-card-priceInfo">
+                    <div class="pg-product-card-quantity">
+                        <label class="pg-label">1000 per pack</label>
+                    </div>
+                    <div class="pg-product-card-starting">
+                        <label class="pg-label">Starting from</label>
+                    </div>
+                    <div class="pg-product-card-price">
+                        <label class="pg-label">$100.00</label>
+                    </div>
+                    <button class="pg-btn pg-btn-small pg-btn-outline pg-m-none">Pricing</button>
+                </div>
+                <div class="pg-buttonHolder-panel">
+                    <button type="submit" class="btn btn-small btn-primary  pg-m-none pg-align-self-end">Order</button>
+                    <button class="btn btn-small btn-primary  pg-m-none pg-align-self-end" (click)="handleCLick()">Remove</button>
+
+                </div>
+            </div>
+
+        </div>
+    </form>
+</div>

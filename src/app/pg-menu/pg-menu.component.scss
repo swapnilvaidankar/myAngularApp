@@ -1,0 +1,7 @@
+@import "../../assets/css/0-Settings/settings.colors.scss";
+.pg-dark{
+    background-image: linear-gradient(to right,$primary1-color, $primary2-color)    
+}
+.nav-link{
+    color: $menu-font-color !important;
+}

@@ -1,0 +1,13 @@
+.pg-categories{
+    // border: 1px solid black;
+    margin-top: 20px;
+    .pg-category-list{
+        // border: 1px solid red;
+        padding-left: 0;
+        .pg-category-item{
+            border-bottom: 1px solid lightgray;
+            list-style: none;
+            line-height: 3;
+        }
+    }
+}
