@@ -1,0 +1,137 @@
+.pg-header {
+    max-width: var(--container-max-width);
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    width: 100%;
+    padding-right: calc(16 * var(--base-padding));
+    padding-left: calc(16 * var(--base-padding));
+}
+
+.pg-navbar {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    height: var(--header-height);
+}
+
+.pg-logo {
+    width: var(--image-logo-width);
+    vertical-align: middle;
+}
+
+.pg-userOptions ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 0px;
+}
+
+.pg-search-bar {
+    display: flex;
+    height: var(--button-height);
+}
+
+.pg-search-input {
+    width: 70%;
+    margin-bottom: 0px;
+    background-image: url(../../Images/search.png);
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position-x: 99%;
+    border-radius: 0 4px 4px 0;
+}
+
+.pg-userOptions-btn {
+    margin: 0px;
+    height: 22px;
+    background-color: var(--general-color);
+    border-color: var(--general-color);
+}
+
+.pg-all-btn {
+    margin: 0px;
+    height: 22px;
+    background-color: var(--primary1-color);
+    border: 0;
+    height: var(--button-height);
+    border-radius: 4px 0 0 4px;
+    color: var(--general-color) !important;
+    width: 50px;
+}
+
+
+.pg-menu-button {
+    display: none;
+}
+
+.pg-userInfo {
+    font-size: var(--body-font-size);
+    color: var(--primary2-color);
+}
+
+/* @media (max-width: 576px) {
+    .pg-userInfo {
+        display: none;
+    }
+} */
+
+
+@media screen and (max-width:767px) {
+    .pg-logoSection, .pg-userOptions {
+        width: 50%;
+    }
+
+    .pg-userInfo {
+        font-size: 14px;
+    }
+    .pg-logoSection {
+        order: 1;
+    }
+    .pg-userOptions {
+        order: 2;
+    }
+    .pg-search {
+        order: 3
+    }
+    .pg-search-input {
+        width: 100%;
+    }
+    .pg-menu-button {
+        display: inline;
+    }
+    .pg-userOptions-btn {
+        display: none;
+        order: 2;
+    }
+    .pg-navbar {
+        height: 100px;
+        align-items: flex-end;
+    }
+}
+
+@media(max-width: 991px) {
+    .pg-userInfo {
+        font-size: 10px;
+    }
+    .pg-header {
+        padding-right: calc(3 * var(--base-padding));
+        padding-left: calc(3 * var(--base-padding));
+    }    
+}
+
+@media(max-width: 1024px) {
+    .pg-userInfo {
+        font-size: 10px;
+    }
+}

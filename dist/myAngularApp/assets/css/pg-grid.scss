@@ -1,0 +1,85 @@
+
+.pg-container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    // display: flex;
+    align-items: center;
+}
+@media (max-width: 1440px){
+    .pg-container{
+        max-width: $max-width;
+    }
+}
+
+
+.pg-btn {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    font-size: var(--button-font-size);
+    outline: 0;
+}
+.pg-btn:focus{
+    box-shadow: 0 0 5px var(--button-focus-shadow-color);
+}
+
+.pg-btn-disabled{
+    background-color: var(--button-disabled-bg-color);
+    cursor: not-allowed;
+}
+
+.pg-btn-outline-disabled {
+    border-width: var(--button-border-width);
+    border-color: var(--button-disabled-bg-color);
+    background-color: var(--general-color);
+    color: var(--body-text-color);
+    cursor: not-allowed;
+}
+
+.pg-btn-small {
+    padding-right: var(--button-leftRight-padding);
+    padding-left: var(--button-leftRight-padding);
+    padding-top: var(--button-topBottom-padding);
+    padding-bottom: var(--button-topBottom-padding);    
+}
+
+.pg-btn-block {
+    width: 100%;
+}
+
+.pg-btn-outline {
+    border-width: var(--button-border-width);
+    border-color: var(--button-primary-color);
+    background-color: transparent;
+    color: var(--button-primary-color);
+}
+
+.pg-btn-outline:hover {
+    background-color: var(--button-primary-color);
+    border-width: var(--button-border-width);
+    border-color: var(--button-border-color);
+    color: var(--button-text-color);
+}
+
+.pg-btn-primary {
+    background-color: var(--button-primary-color);
+    /* border-width: var(--button-border-width);
+    border-color: var(--button-border-color); */
+    color: var(--button-text-color);
+    border: none;
+}
+
+.pg-btn-primary:hover {
+    background-color: var(--button-primary-hover-color);
+}
+
+
+.pg-icon-button {
+    width: 15px;
+    margin-left: 15px;
+    vertical-align: middle;
+}
